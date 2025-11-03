@@ -1,0 +1,22 @@
+import unittest
+from src.puzzle_generator import generate_problem
+from src.adaptive_engine import AdaptiveEngine
+from src.tracker import PerformanceTracker
+
+class TestAdaptive(unittest.TestCase):
+    def test_generate(self):
+        for d in ["Easy","Medium","Hard"]:
+            p,a = generate_problem(d)
+            self.assertIsInstance(p, str)
+            self.assertTrue(isinstance(a, (int,float)))
+    def test_tracker(self):
+        t = PerformanceTracker()
+        t.log('1+1','Easy',2,True,1.0)
+        s = t.summary()
+        self.assertEqual(s['total'],1)
+    def test_engine(self):
+        e = AdaptiveEngine()
+        history = [{'correct':True,'time_taken':1.0}]*3
+        self.assertEqual(e.next_level(history,'Easy'),'Medium')
+if __name__=="__main__":
+    unittest.main()
