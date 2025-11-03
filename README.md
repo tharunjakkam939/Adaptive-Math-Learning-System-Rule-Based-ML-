@@ -1,37 +1,94 @@
-# Adaptive-Math-Learning-System-Rule-Based-ML
 # 🎯 Adaptive Math Learning System (Rule-Based + ML)
 
-This project implements an **Adaptive Learning Platform** that adjusts question difficulty based on student performance.  
-It includes **rule-based logic + a Logistic Regression ML model** for predicting the next difficulty level.
-
-## 🚀 Features
-| Feature | Description |
-|---|---|
-✅ 3 Difficulty Levels | Easy / Medium / Hard  
-✅ Adaptive Engine | Rule-based & ML-driven difficulty change  
-✅ Performance Tracking | Accuracy + Speed + Trends  
-✅ Visual Feedback | Balloons, success/error, charts  
-✅ Automatic CSV Logs | Per-student learning history  
-✅ Streamlit UI | Lightweight interactive interface  
+This project is an **Adaptive Learning Platform** that dynamically adjusts question difficulty based on student performance.  
+It combines **rule-based logic + machine learning (Logistic Regression)** to personalize learning.
 
 ---
 
-## 🧠 Adaptive Logic
+## 🚀 Features
 
-### 📌 Rule-Based Strategy
+| Feature | Description |
+|---|---|
+3 difficulty levels | Easy / Medium / Hard  
+Adaptive Logic | Rule-based + ML model  
+Feedback | ✅ Correct ❌ Wrong + Balloons 🎉  
+Performance Tracking | Accuracy, time, streaks  
+Auto Logs | CSV saved per student session  
+Charts | Response time + Correctness trend  
+UI | Streamlit interactive dashboard  
+
+---
+
+## 🧠 How It Works
+
+### ✅ Rule-Based Engine
 | Condition | Action |
 |---|---|
-3 correct fast | Increase difficulty  
-2 wrong OR slow | Decrease difficulty  
+3 fast correct answers | Increase difficulty  
+2 wrong or slow answers | Decrease difficulty  
 
-### 🤖 ML Strategy (Logistic Regression)
-Inputs:
-- Accuracy
-- Average time per question
-
-Output:
-- Next difficulty class (Easy / Medium / Hard)
+### 🤖 ML Engine (Logistic Regression)
+**Input:** Accuracy + Avg time per question  
+**Output:** Next difficulty level (E/M/H)
 
 ---
 
 ## 🏗 Architecture
+
+![Architecture Flow](architecture_flow.png)
+
+---
+
+## 🔁 Learning Flow
+
+![Learning Flow](learning_flow.png)
+
+---
+
+## 📂 Project Structure
+
+math-adaptive-prototype/
+├─ README.md
+├─ requirements.txt
+└─ src/
+    ├─ streamlit_app.py
+    ├─ puzzle_generator.py
+    ├─ tracker.py
+    └─ adaptive_engine.py
+
+
+---
+
+## 🚀 Run Instructions
+
+### 1️⃣ Create environment & install
+```bash
+python -m venv venv
+venv\Scripts\activate      # Windows
+pip install -r requirements.txt
+2️⃣ Launch App
+streamlit run src/streamlit_app.py
+📊 Output Example
+
+Live adaptive questions
+
+Feedback after each question
+
+Real-time difficulty updates
+
+Final learning summary report
+
+🧠 Future Enhancements
+
+Deep-learning based difficulty predictor
+
+Student knowledge graph
+
+Voice questions + speech response
+
+More topics: algebra, fractions, geometry
+
+👨‍💻 Developed For
+
+AI-Adaptive Learning Assignment
+Demonstrates AI system for math learning personalization.
