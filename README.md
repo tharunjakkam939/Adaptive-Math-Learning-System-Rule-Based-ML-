@@ -68,9 +68,9 @@ bash
 python -m venv venv
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
-2️⃣ Launch App
+##2️⃣ Launch App
 streamlit run src/streamlit_app.py
-📊 Output Example
+##📊 Output Example
 
 Live adaptive questions
 
@@ -84,7 +84,7 @@ Final learning summary report
 
 
 
-🧠 Future Enhancements
+##🧠 Future Enhancements
 
 Deep-learning based difficulty predictor
 
@@ -94,7 +94,7 @@ Voice questions + speech response
 
 More topics: algebra, fractions, geometry
 
-👨‍💻 Developed For
+##👨‍💻 Developed For
 
 AI-Adaptive Learning Assignment
 Demonstrates AI system for math learning personalization.
