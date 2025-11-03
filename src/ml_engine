@@ -1,0 +1,29 @@
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+class MLAdaptiveEngine:
+    def __init__(self):
+        self.model = LogisticRegression()
+        self.trained = False
+
+    def train(self):
+        # Synthetic training dataset: [accuracy, avg_time] -> difficulty
+        X = np.array([
+            [0.9, 4], [0.85, 6], [0.8, 8],   # Easy → Medium
+            [0.95, 3], [0.97, 2],           # Easy → Hard (very strong)
+            [0.5, 9], [0.6, 10],            # Medium stay
+            [0.3, 20], [0.4, 18],           # Hard → Medium
+            [0.2, 25]                       # Hard → Easy
+        ])
+
+        y = np.array([1,1,1, 2,2, 1,1, 0,0, 0])  # 0=Easy, 1=Medium, 2=Hard
+
+        self.model.fit(X, y)
+        self.trained = True
+
+    def predict_next(self, accuracy, avg_time):
+        if not self.trained:
+            self.train()
+
+        difficulty_idx = self.model.predict([[accuracy, avg_time]])[0]
+        return ["Easy", "Medium", "Hard"][difficulty_idx]
