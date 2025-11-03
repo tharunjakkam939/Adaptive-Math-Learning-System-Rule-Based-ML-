@@ -11,7 +11,7 @@ It combines **rule-based logic + machine learning (Logistic Regression)** to per
 |---|---|
 3 difficulty levels | Easy / Medium / Hard  
 Adaptive Logic | Rule-based + ML model  
-Feedback | ✅ Correct ❌ Wrong + Balloons 🎉  
+Feedback | ✅ Correct + Balloons 🎉  ❌ Wrong
 Performance Tracking | Accuracy, time, streaks  
 Auto Logs | CSV saved per student session  
 Charts | Response time + Correctness trend  
