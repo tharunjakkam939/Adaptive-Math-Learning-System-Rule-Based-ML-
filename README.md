@@ -31,7 +31,7 @@ UI | Streamlit interactive dashboard
 **Input:** Accuracy + Avg time per question  
 **Output:** Next difficulty level (E/M/H)
 
----
+
 
 ## 🏗 Architecture
 
@@ -39,14 +39,13 @@ UI | Streamlit interactive dashboard
 
 
 
----
+
 
 ## 🔁 Learning Flow
 <img width="2850" height="1446" alt="adaptive_learning_flow" src="https://github.com/user-attachments/assets/852db066-2eb5-4053-b6dd-f6519d94b362" />
 
 
 
----
 
 ## 📂 Project Structure
 
@@ -60,12 +59,12 @@ math-adaptive-prototype/
     └─ adaptive_engine.py
 
 
----
+
 
 ## 🚀 Run Instructions
 
 ### 1️⃣ Create environment & install
-```bash
+bash
 python -m venv venv
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
